@@ -1,8 +1,9 @@
 #include<stdio.h>
 int main()
 {
-    int i,n,arr[100],c=0,d=0;
+    int n,i,count=0;
     scanf("%d",&n);
+    int arr[n];
     for(i=0;i<n;i++)
     {
         scanf("%d",&arr[i]);
@@ -11,23 +12,16 @@ int main()
     {
         if(arr[i]%2!=0)
         {
-            if(i%2!=0)
+            if(i%2==0)
             {
-                c++;
-            }
-            else
-            {
-                d++;
+                count++;
                 break;
             }
         }
-    }   
-    if(d==0)
-    {
-        printf("True");
     }
+    if(count==0)
+    printf("True");
     else
-    {
-        printf("False");
-    }
+    printf("False");
+    return 0;
 }
