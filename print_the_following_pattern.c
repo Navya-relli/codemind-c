@@ -6,16 +6,15 @@ int main()
     int i,j;
     for(i=0;i<a;i++)
     {
-        for(j=1;j<a-1;j++)
+        for(j=0;j<a-(i+1);j++)
         {
-            printf("%d",j);
+            printf(" ");
         }
-        for(j=a-3;j>=1;j--)
+        for(j=0;j<i*2+1;j++)
         {
-            printf("%d",j);
+            printf("%d",i+1);
         }
         printf("
 ");
     }
-    return 0;
 }
